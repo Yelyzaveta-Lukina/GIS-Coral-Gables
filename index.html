@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coral Gables Map</title>
+
+  <!-- ArcGIS Maps SDK for JavaScript (Map Components) -->
+  <script src="https://js.arcgis.com/4.34/"></script>
+
+  <!-- Map Components -->
+  <script type="module" src="https://js.arcgis.com/4.34/map-components/"></script>
+  
+  <link rel="stylesheet" href="https://js.arcgis.com/4.34/esri/themes/light/main.css" />
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+  <div class="app">
+    <div class="sidebar">
+      <h3>Navigation</h3>
+      <button id="btn-coral">Center: Coral Gables</button>
+      <button id="btn-zoom-in">Zoom In</button>
+      <button id="btn-zoom-out">Zoom Out</button>
+
+      <hr />
+      <label>Radius:</label>
+      <input id="radius" type="number" value="1000" />
+      <select id="radiusUnit">
+        <option value="feet" selected>feet</option>
+        <option value="meters">meters</option>
+      </select>
+
+      <!--<button id="btn-radius-mode">Radius Select (click map)</button> -->
+      <button id="btn-clear">Clear</button>
+
+      <hr />
+      
+      <div id="selected-count">Selected: 0</div>
+      <input id="selected-filter" type="text" placeholder="Filter selected (address/city)..." />
+
+      <select id="selected-sort">
+        <option value="none" selected>Sort: None</option>
+        <option value="az">Sort: Address (numeric)</option>
+        <option value="za">Sort: Address (numeric, reverse)</option>
+      </select>
+
+      <button id="btn-clear-filters" type="button">Clear filters</button>
+
+      <div id="selected-list" class="selected-list"></div>
+    </div>
+
+
+
+    <div class="main">
+      <arcgis-map id="map" basemap="streets-navigation-vector"></arcgis-map>
+    </div>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

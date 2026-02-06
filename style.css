@@ -1,0 +1,114 @@
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+   .app {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.sidebar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 220px;
+  background: white;
+  padding: 12px;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  z-index: 10;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+    /* Make the map fill the main area */
+    arcgis-map {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+
+      box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+
+      cursor: pointer;
+      font-size: 14px;
+
+      transition: all 0.2s ease;  
+    }
+
+    /* Hover */
+button:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transform: translateY(-1px);
+}
+
+/* Click */
+button:active {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transform: translateY(0);
+}
+
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#selected-count {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+#selected-filter {
+  margin-top: 10px;
+}
+
+#selected-sort {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.selected-list {
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.selected-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.selected-item:hover {
+  background: #f5f7ff;
+}
+
+#btn-clear-filters {
+  margin-bottom: 10px;
+}
